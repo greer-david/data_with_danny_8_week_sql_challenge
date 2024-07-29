@@ -98,7 +98,7 @@ This is a breakdown of my solutions to Danny Ma's 8 Week SQL Challenge
 | C           | 2    |
 
 ---
-**Query #3**
+### **Query #3**
 What was the first item from the menu purchased by each customer?
 ```sql
     WITH p_rank AS (
