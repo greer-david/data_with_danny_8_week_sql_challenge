@@ -81,6 +81,7 @@ This is a breakdown of my solutions to Danny Ma's 8 Week SQL Challenge
 ---
 **Query #2**
 
+```sql
     SELECT
     	customer_id,
         COUNT(DISTINCT order_date) days
@@ -89,7 +90,7 @@ This is a breakdown of my solutions to Danny Ma's 8 Week SQL Challenge
     GROUP BY
     	customer_id
     ;
-
+```
 | customer_id | days |
 | ----------- | ---- |
 | A           | 4    |
@@ -99,6 +100,7 @@ This is a breakdown of my solutions to Danny Ma's 8 Week SQL Challenge
 ---
 **Query #3**
 
+```sql
     WITH p_rank AS (
     SELECT
     	customer_id,
@@ -120,7 +122,7 @@ This is a breakdown of my solutions to Danny Ma's 8 Week SQL Challenge
     WHERE
     	ord_num = 1
     ;
-
+```
 | customer_id | product_name |
 | ----------- | ------------ |
 | A           | curry        |
@@ -132,6 +134,7 @@ This is a breakdown of my solutions to Danny Ma's 8 Week SQL Challenge
 ---
 **Query #4**
 
+```sql
     SELECT
     	product_name,
         COUNT(*) times_purchased
@@ -147,7 +150,7 @@ This is a breakdown of my solutions to Danny Ma's 8 Week SQL Challenge
     	COUNT(*) DESC
     LIMIT 1
     ;
-
+```
 | product_name | times_purchased |
 | ------------ | --------------- |
 | ramen        | 8               |
@@ -155,6 +158,7 @@ This is a breakdown of my solutions to Danny Ma's 8 Week SQL Challenge
 ---
 **Query #5**
 
+```sql
     WITH top_p AS (
     SELECT
     	customer_id,
@@ -179,7 +183,7 @@ This is a breakdown of my solutions to Danny Ma's 8 Week SQL Challenge
     WHERE
     	rnk = 1
     ;
-
+```
 | customer_id | product_name |
 | ----------- | ------------ |
 | A           | ramen        |
@@ -191,6 +195,7 @@ This is a breakdown of my solutions to Danny Ma's 8 Week SQL Challenge
 ---
 **Query #6**
 
+```sql
     WITH p_rank AS (
     SELECT
     	s.customer_id,
@@ -219,7 +224,7 @@ This is a breakdown of my solutions to Danny Ma's 8 Week SQL Challenge
     WHERE
     	ord_num = 1
     ;
-
+```
 | customer_id | product_name |
 | ----------- | ------------ |
 | A           | curry        |
@@ -228,6 +233,7 @@ This is a breakdown of my solutions to Danny Ma's 8 Week SQL Challenge
 ---
 **Query #7**
 
+```sql
     WITH p_rank AS (
     SELECT
     	s.customer_id,
@@ -256,7 +262,7 @@ This is a breakdown of my solutions to Danny Ma's 8 Week SQL Challenge
     WHERE
     	ord_num = 1
     ;
-
+```
 | customer_id | product_name |
 | ----------- | ------------ |
 | A           | sushi        |
@@ -266,6 +272,7 @@ This is a breakdown of my solutions to Danny Ma's 8 Week SQL Challenge
 ---
 **Query #8**
 
+```sql
     SELECT
     	s.customer_id,
         COUNT(order_date) item_count,
@@ -285,7 +292,7 @@ This is a breakdown of my solutions to Danny Ma's 8 Week SQL Challenge
     GROUP BY
     	s.customer_id
     ;
-
+```
 | customer_id | item_count | tot_spend |
 | ----------- | ---------- | --------- |
 | B           | 3          | 40        |
@@ -294,6 +301,7 @@ This is a breakdown of my solutions to Danny Ma's 8 Week SQL Challenge
 ---
 **Query #9**
 
+```sql
     SELECT
     	SUM(CASE
                 WHEN product_name = 'sushi' THEN (price * 10) * 2
@@ -311,7 +319,7 @@ This is a breakdown of my solutions to Danny Ma's 8 Week SQL Challenge
     ORDER BY
     	points DESC
     ;
-
+```
 | points | customer_id |
 | ------ | ----------- |
 | 940    | B           |
@@ -321,6 +329,7 @@ This is a breakdown of my solutions to Danny Ma's 8 Week SQL Challenge
 ---
 **Query #10**
 
+```sql
     SELECT
     	s.customer_id,
         SUM(CASE
@@ -343,12 +352,10 @@ This is a breakdown of my solutions to Danny Ma's 8 Week SQL Challenge
     GROUP BY
     	s.customer_id
     ;
-
+```
 | customer_id | new_points |
 | ----------- | ---------- |
 | A           | 1370       |
 | B           | 820        |
 
 ---
-
-[View on DB Fiddle](https://www.db-fiddle.com/f/2rM8RAnq7h5LLDTzZiRWcd/138)
