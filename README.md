@@ -60,7 +60,7 @@ This is a breakdown of my solutions to Danny Ma's 8 Week SQL Challenge
 ---
 
 ### **Query #1**
-- What is the total amount each customer spent at the restaurant?
+What is the total amount each customer spent at the restaurant?
 ```sql
     SELECT
       	customer_id,
@@ -79,8 +79,8 @@ This is a breakdown of my solutions to Danny Ma's 8 Week SQL Challenge
 | C           | 36        |
 
 ---
-**Query #2**
-- How many days has each customer visited the restaurant?
+### **Query #2**
+How many days has each customer visited the restaurant?
 ```sql
     SELECT
     	customer_id,
@@ -132,7 +132,7 @@ What was the first item from the menu purchased by each customer?
 | C           | ramen        |
 
 ---
-**Query #4**
+### **Query #4**
 What is the most purchased item on the menu and how many times was it purchased by all customers?
 ```sql
     SELECT
@@ -156,7 +156,7 @@ What is the most purchased item on the menu and how many times was it purchased 
 | ramen        | 8               |
 
 ---
-**Query #5**
+### **Query #5**
 Which item was the most popular for each customer?
 ```sql
     WITH top_p AS (
@@ -193,7 +193,7 @@ Which item was the most popular for each customer?
 | C           | ramen        |
 
 ---
-**Query #6**
+### **Query #6**
 6. Which item was purchased first by the customer after they became a member?
 ```sql
     WITH p_rank AS (
@@ -231,7 +231,7 @@ Which item was the most popular for each customer?
 | B           | sushi        |
 
 ---
-**Query #7**
+### **Query #7**
 7. Which item was purchased just before the customer became a member?
 ```sql
     WITH p_rank AS (
@@ -270,7 +270,7 @@ Which item was the most popular for each customer?
 | B           | sushi        |
 
 ---
-**Query #8**
+### **Query #8**
 8. What is the total items and amount spent for each member before they became a member?
 ```sql
     SELECT
@@ -299,7 +299,7 @@ Which item was the most popular for each customer?
 | A           | 2          | 25        |
 
 ---
-**Query #9**
+### **Query #9**
 9. If each $1 spent equates to 10 points and sushi has a 2x points multiplier, how many points would each customer have?
 ```sql
     SELECT
@@ -327,7 +327,7 @@ Which item was the most popular for each customer?
 | 360    | C           |
 
 ---
-**Query #10**
+### **Query #10**
 10. In the first week after a customer joins the program (including their join date) they earn 2x points on all items, not just sushi how many points do customer A and B have at the end of January?
 ```sql
     SELECT
