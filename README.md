@@ -60,7 +60,8 @@ This is a breakdown of my solutions to Danny Ma's 8 Week SQL Challenge
 ---
 
 **Query #1**
-
+1. What is the total amount each customer spent at the restaurant?
+```sql
     SELECT
       	customer_id,
         SUM(price) tot_spend
@@ -70,7 +71,7 @@ This is a breakdown of my solutions to Danny Ma's 8 Week SQL Challenge
     GROUP BY customer_id
     ORDER BY tot_spend DESC
     LIMIT 5;
-
+```
 | customer_id | tot_spend |
 | ----------- | --------- |
 | A           | 76        |
