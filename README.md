@@ -1,7 +1,7 @@
 # Data with Danny's 8 Week SQL Challenge
 This is a breakdown of my solutions to Danny Ma's 8 Week SQL Challenge
 
-## Week 1
+## Week 1 - Danny's Diner
 Skills tested in Week 1
 - Ranking, Common Table Expressions (CTEs), Case Statements, Dates and Scalar functions
 
