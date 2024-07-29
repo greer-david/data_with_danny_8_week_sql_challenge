@@ -59,7 +59,7 @@ This is a breakdown of my solutions to Danny Ma's 8 Week SQL Challenge
 ```
 ---
 
-**Query #1**
+### **Query #1**
 - What is the total amount each customer spent at the restaurant?
 ```sql
     SELECT
