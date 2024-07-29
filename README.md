@@ -80,7 +80,7 @@ This is a breakdown of my solutions to Danny Ma's 8 Week SQL Challenge
 
 ---
 **Query #2**
-2. How many days has each customer visited the restaurant?
+##2. How many days has each customer visited the restaurant?
 ```sql
     SELECT
     	customer_id,
