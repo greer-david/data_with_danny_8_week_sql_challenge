@@ -194,7 +194,7 @@ Which item was the most popular for each customer?
 
 ---
 ### **Query #6**
-6. Which item was purchased first by the customer after they became a member?
+Which item was purchased first by the customer after they became a member?
 ```sql
     WITH p_rank AS (
     SELECT
@@ -232,7 +232,7 @@ Which item was the most popular for each customer?
 
 ---
 ### **Query #7**
-7. Which item was purchased just before the customer became a member?
+Which item was purchased just before the customer became a member?
 ```sql
     WITH p_rank AS (
     SELECT
@@ -271,7 +271,7 @@ Which item was the most popular for each customer?
 
 ---
 ### **Query #8**
-8. What is the total items and amount spent for each member before they became a member?
+What is the total items and amount spent for each member before they became a member?
 ```sql
     SELECT
     	s.customer_id,
@@ -300,7 +300,7 @@ Which item was the most popular for each customer?
 
 ---
 ### **Query #9**
-9. If each $1 spent equates to 10 points and sushi has a 2x points multiplier, how many points would each customer have?
+If each $1 spent equates to 10 points and sushi has a 2x points multiplier, how many points would each customer have?
 ```sql
     SELECT
     	SUM(CASE
@@ -328,7 +328,7 @@ Which item was the most popular for each customer?
 
 ---
 ### **Query #10**
-10. In the first week after a customer joins the program (including their join date) they earn 2x points on all items, not just sushi how many points do customer A and B have at the end of January?
+In the first week after a customer joins the program (including their join date) they earn 2x points on all items, not just sushi how many points do customer A and B have at the end of January?
 ```sql
     SELECT
     	s.customer_id,
